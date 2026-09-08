@@ -1,7 +1,9 @@
+#include "io/io.h"
 #include <iostream>
 
-int main() 
+int main()
 {
-	std::cout << "Hello World!";
+	io::menu::printMenuOptions();
+
 	return 0;
 }
