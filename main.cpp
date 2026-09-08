@@ -3,15 +3,8 @@
 #include <iostream>
 #include <cstdint>
 
-static void cleanup()
-{
-	io::quit::printQuitMessage(1);
-}
-
 int main()
 {
-	std::atexit(cleanup);
-
 	std::uint16_t option{};
 	do {
 		io::menu::printMenuOptions();
@@ -40,8 +33,10 @@ int main()
 			io::sessionStats::printSessionStats(1, 1);
 			break;
 		}
-		case 3:
+		case 3: {
+			io::quit::printQuitMessage(1);
 			break;
+		}
 		default:
 			continue;
 		}
