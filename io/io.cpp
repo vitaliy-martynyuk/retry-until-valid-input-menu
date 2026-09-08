@@ -1,10 +1,12 @@
 #include "io.h"
 #include <iostream>
+#include <cstdint>
 
 namespace io
 {
 	using std::cout;
 	using std::cin;
+	using std::uint16_t;
 
 	namespace menu
 	{
@@ -16,10 +18,10 @@ namespace io
 			cout << "3) Quit\n";
 		}
 
-		int getMenuOption()
+		uint16_t getMenuOption()
 		{
 			cout << "Choose an option: ";
-			int input{};
+			uint16_t input{};
 			cin >> input;
 
 			cout << '\n';
@@ -30,11 +32,10 @@ namespace io
 
 	namespace item
 	{
-		int getItemCode()
+		uint16_t getItemCode()
 		{
-			cout << "--- Log item ---\n";
 			cout << "Enter item code (1000-9999): ";
-			int input{};
+			uint16_t input{};
 			cin >> input;
 
 			return input;
@@ -45,7 +46,7 @@ namespace io
 			cout << "Invalid item code. Try again.\n";
 		}
 
-		void printItemCodeSuccess(int id)
+		void printItemCodeSuccess(uint16_t id)
 		{
 			cout << "Item " << id << " logged.\n\n";
 		}
@@ -53,7 +54,7 @@ namespace io
 
 	namespace sessionStats
 	{
-		void printSessionStats(int itemsSuccess, int itemsError)
+		void printSessionStats(uint16_t itemsSuccess, uint16_t itemsError)
 		{
 			cout << "--- View stats ---\n";
 			cout << "Items logged: " << itemsSuccess << '\n';
@@ -63,7 +64,7 @@ namespace io
 
 	namespace quit
 	{
-		void printQuitMessage(int totalItems)
+		void printQuitMessage(uint16_t totalItems)
 		{
 			cout << "Session ended. " << totalItems << " item(s) logged this session.\n";
 		}
