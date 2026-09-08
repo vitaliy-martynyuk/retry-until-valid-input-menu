@@ -64,9 +64,14 @@ namespace io
 
 	namespace quit
 	{
-		void printQuitMessage(uint16_t totalItems)
+		void printQuitMessage(uint16_t itemsSuccess, uint16_t itemsError)
 		{
-			cout << "Session ended. " << totalItems << " item(s) logged this session.\n";
+			cout << "Session ended. " << itemsSuccess << " item(s) logged this session (" << itemsError << " failed attempts).\n";
+		}
+
+		void printSessionLimitReachedMessage(uint16_t itemsSuccess, uint16_t itemsError)
+		{
+			cout << "Session limit reached. " << itemsSuccess << " item(s) logged this session (" << itemsError << " failed attempts).\n";
 		}
 	}
 }
