@@ -7,7 +7,7 @@ namespace globals
 {
 	using std::uint16_t;
 
-	inline constexpr uint16_t maxSessionItems{ 2 };
+	inline constexpr uint16_t maxSessionItems{ 999 };
 
 	void incrementItemsSuccess();
 	void incrementItemsError();

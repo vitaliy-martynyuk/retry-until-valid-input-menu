@@ -43,7 +43,7 @@ int main()
 		default:
 			continue;
 		}
-	} while (option != 3 && globals::getItemsSuccess() <= globals::maxSessionItems);
+	} while (option != 3 && globals::getItemsSuccess() < globals::maxSessionItems);
 
 	if (globals::getItemsSuccess() > globals::maxSessionItems) {
 		io::quit::printSessionLimitReachedMessage(globals::getItemsSuccess(), globals::getItemsError());
