@@ -57,7 +57,7 @@ namespace io
 		{
 			cout << "--- View stats ---\n";
 			cout << "Items logged: " << itemsSuccess << '\n';
-			cout << "Failed attempts to log: " << itemsError << '\n\n';
+			cout << "Failed attempts to log: " << itemsError << "\n\n";
 		}
 	}
 
