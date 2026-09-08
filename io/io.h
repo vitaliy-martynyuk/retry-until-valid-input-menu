@@ -27,7 +27,7 @@ namespace io
 
 	namespace quit
 	{
-		void printQuitMessage(uint16_t totalItems);
+		void printQuitMessage(uint16_t itemsSuccess, uint16_t itemsError);
 	}
 }
 

@@ -145,10 +145,12 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="globals\globals.cpp" />
     <ClCompile Include="io\io.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="globals\globals.h" />
     <ClInclude Include="io\io.h" />
     <ClInclude Include="validation\validation.h" />
   </ItemGroup>
